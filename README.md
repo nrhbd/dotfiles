@@ -1,1 +1,2 @@
-Not a perfect .vimrc, but it does work with javascript file
+- works on my old laptop { i3, xorg, arch linux}
+- vimrc needs to be update
