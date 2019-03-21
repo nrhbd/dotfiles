@@ -16,9 +16,11 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a Termite as terminal
-bindsym $mod+Return exec urxvt 
 exec --no-startup-id  feh --randomize --bg-fill ~/Bilder/wallpapers/*
-
+bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec termite
+#bindsym $mod+Return exec konsole 
+#bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -104,7 +106,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8

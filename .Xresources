@@ -18,6 +18,7 @@ URxvt*font:                 xft:Droid Sans Mono Slashed for Powerline:pixelsize=
 URxvt*boldFont:             xft:Droid Sans Mono Slashed for Powerline:pixelsize=14:minspace=False, xft:DejaVu Sans:pixelsize=10
 URxvt*letterSpace: 0
 
+!URxvt*font:    xft:Fira Code Regular: pixelsize:16
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-urxvt256.xresources

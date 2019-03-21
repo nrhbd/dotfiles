@@ -40,7 +40,7 @@ noremap <F4> :GitGutterToggle<cr>
     "Others ---------------------------------------------------------{{{
 "}}}
     imap <C-l> <Esc>$a
-    map <C-m> :FZF <CR>
+    map <F5> :FZF <CR>
     nnoremap <S-f> :find
     nnoremap <S-t> :tabnew<CR>
     nnoremap  <C-k> :tabclose<CR>
@@ -88,54 +88,49 @@ noremap <F4> :GitGutterToggle<cr>
     nnoremap <leader>f :FlyGrep<cr>
 
 "}}}
-"Plugins -----------------------------------------------------------------{{{
+"Plugs -----------------------------------------------------------------{{{
     """"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-""""""""""""""""""""""""""List of Plugins"""""""""""""""""""""""""
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+""""""""""""""""""""""""""List of Plugs"""""""""""""""""""""""""
+Plug 'VundleVim/Vundle.vim'
 " highlights the tags <tag> </tag>
-Plugin 'valloric/MatchTagAlways'
-Plugin 'wsdjeg/FlyGrep.vim'
-Plugin 'dracula/vim'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'jason0x43/vim-js-indent'
-Plugin 'Quramy/vim-js-pretty-template'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'jceb/vim-orgmode'
+Plug 'valloric/MatchTagAlways'
+Plug 'wsdjeg/FlyGrep.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'flazz/vim-colorschemes'
+Plug 'jason0x43/vim-js-indent'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'Shutnik/jshint2.vim'
+Plug 'jceb/vim-orgmode'
 "Syntax highlighting for lots of languages
-Plugin 'sheerun/vim-polyglot'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdtree'
 "works with only html tags ()"
-Plugin 'alvan/vim-closetag'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'w0rp/ale'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-surround'
-Plugin 'digitaltoad/vim-pug'
-"Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'vim-airline/vim-airline' "Status bar
-Plugin 'mattn/emmet-vim' "works in Html and CSS files  only"
-Plugin 'jiangmiao/auto-pairs' "add \" for everything"
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'enricobacis/vim-airline-clock'
-Plugin 'liuchengxu/space-vim-dark'
-Plugin 'morhetz/gruvbox' " gruvbox is a theme
-call vundle#end()            " required
+Plug 'alvan/vim-closetag'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Quramy/tsuquyomi'
+Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
+Plug 'digitaltoad/vim-pug'
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'vim-airline/vim-airline' "Status bar
+Plug 'mattn/emmet-vim' "works in Html and CSS files  only"
+Plug 'jiangmiao/auto-pairs' "add \" for everything"
+Plug 'vim-airline/vim-airline-themes'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'morhetz/gruvbox' " gruvbox is a theme
+call plug#end()
 filetype plugin indent on    " required
 "}}}i
 "Folding ---------------------------------------------------------------- {{{
@@ -175,9 +170,20 @@ augroup END
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
-    let g:airline_theme='base16_colors'
+    let g:airline_theme='gruvbox'
     let g:airline#extensions#tabline#formatter = 'jsformatter'
 "}}}
+    "Theme -----------------------------------------------------------{{{
+    colorscheme gruvbox
+    " setting for gruvbox
+    set background=dark    " Setting dark mode
+    nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+    nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+    nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+    nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+    nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+    nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+    "}}}
 "}}}
 "HTML --------------------------------------------------------------------{{{
     "Emmet -----------------------------------------------------------{{{
@@ -218,3 +224,4 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 "}}}
+

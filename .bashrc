@@ -12,3 +12,9 @@ if [[ -f $THEME ]]; then
     export DEFAULT_USER=`whoami`
     source $THEME
 fi
+bind '"\C-g":"fg\n"'
+ source ~/.allalias
+
+# To apply the command to CTRL-T as well
+export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude node_modules '
+. $HOME/.ghcup/env
