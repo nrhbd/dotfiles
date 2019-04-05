@@ -86,7 +86,7 @@ noremap <F4> :GitGutterToggle<cr>
     "Open NERDTree
     map <leader>n :NERDTreeToggle<CR>
     nnoremap <leader>f :FlyGrep<cr>
-
+let g:move_key_modifier = 'C'
 "}}}
 "Plugs -----------------------------------------------------------------{{{
     """"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -95,6 +95,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 " highlights the tags <tag> </tag>
 Plug 'valloric/MatchTagAlways'
+Plug 'matze/vim-move'
 Plug 'wsdjeg/FlyGrep.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}

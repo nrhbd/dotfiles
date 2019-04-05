@@ -48,7 +48,7 @@
     ((sequence "TODO(t)" "DONE(d)" "WAITING(w)" "SOMEDAY(s)"))))
  '(package-selected-packages
    (quote
-    (amx one-themes one-themeS atom-one-dark-theme atom-one-dark kaolin-themes which-key dashboard org-bullets avy linum-relative use-package))))
+    (ace-window switch-window amx one-themes one-themeS atom-one-dark-theme atom-one-dark kaolin-themes which-key dashboard org-bullets avy linum-relative use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
