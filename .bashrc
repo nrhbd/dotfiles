@@ -13,8 +13,10 @@ if [[ -f $THEME ]]; then
     source $THEME
 fi
 bind '"\C-g":"fg\n"'
- source ~/.allalias
+ source ~/.alias
 
 # To apply the command to CTRL-T as well
 export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude node_modules '
+# prepare your environment for haskell
+# curl https://raw.githubusercontent.com/haskell/ghcup/master/bootstrap-haskell -sSf | sh
 . $HOME/.ghcup/env

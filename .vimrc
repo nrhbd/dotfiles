@@ -1,20 +1,3 @@
-"README ------------------------------------------------------------------{{{
-"
-"}}}
-"Keys --------------------------------------------------------------------{{{
-"keys           ||||||||||||||      functions
-"
-"Ctrl-l         ||||||||||||||  goto end of line in edit mode
-"Ctrl-k         ||||||||||||||  close tab
-"Ctrl-h         ||||||||||||||  Document wrap, avoid lines overflow
-"Ctrl-p         ||||||||||||||  go a paragraph up
-"Ctrl-n         ||||||||||||||  go a paragraph down
-"Ctrl-a         ||||||||||||||  select all
-"Ctrl-d         ||||||||||||||  save and exit
-"Ctrl-w         ||||||||||||||  save
-"Ctrl-z         ||||||||||||||  hold and exit
-"Tab            ||||||||||||||  expand folding
-"}}}
 "Keybinds ----------------------------------------------------------------{{{
     "Leader ----------------------------------------------------------{{{
     "Leader key
@@ -89,7 +72,7 @@ noremap <F4> :GitGutterToggle<cr>
 let g:move_key_modifier = 'C'
 "}}}
 "Plugs -----------------------------------------------------------------{{{
-    """"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    """"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""List of Plugs"""""""""""""""""""""""""
 Plug 'VundleVim/Vundle.vim'

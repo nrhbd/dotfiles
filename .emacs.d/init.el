@@ -42,13 +42,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/org/foo.org" "/home/rhn/org/admin.org")))
+ '(org-agenda-files nil)
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "DONE(d)" "WAITING(w)" "SOMEDAY(s)"))))
  '(package-selected-packages
    (quote
-    (ace-window switch-window amx one-themes one-themeS atom-one-dark-theme atom-one-dark kaolin-themes which-key dashboard org-bullets avy linum-relative use-package))))
+    (isp-haskell intero lsp lsp-ui company-lsp lsp-haskell ace-window switch-window amx one-themes one-themeS atom-one-dark-theme atom-one-dark kaolin-themes which-key dashboard org-bullets avy linum-relative use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
