@@ -1,2 +1,0 @@
-- works on my old laptop { i3, xorg, arch linux}
-- vimrc needs to be update

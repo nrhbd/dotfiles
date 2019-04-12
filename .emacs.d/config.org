@@ -5,6 +5,9 @@
 (scroll-bar-mode -1)
 (setq line-number-mode t)
 (setq column-number-mode t)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
 #+END_SRC
 
 * follow split
@@ -68,10 +71,14 @@ ctrl+return
 #+BEGIN_SRC emacs-lisp
 (use-package prettier-js
 :ensure t
-:config 
+:config
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+(setq prettier-js-args '(
+  "--trailing-comma" "all"
+  "--bracket-spacing" "false"
+))
 )
 #+END_SRC
 
@@ -193,9 +200,10 @@ ctrl+return
 (use-package js2-mode 
 :ensure t 
 :config 
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . js2-mode))
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-k")
 )
 
 #+END_SRC
@@ -274,10 +282,16 @@ ctrl+return
 
 * haskell
 #+BEGIN_SRC emacs-lisp
+(use-package lsp-haskell
+:ensure t
+:config 
+(add-hook 'haskell-mode-hook #'lsp))
 (use-package haskell-mode
-:ensure t)
+:ensure t
+:config
+(setq haskell-stylish-on-save t)
+(setq haskell-mode-stylish-haskell-path "brittany"))
 #+END_SRC
-
 * org-mode
 #+BEGIN_SRC emacs-lisp
 (use-package org
