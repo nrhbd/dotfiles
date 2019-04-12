@@ -1,0 +1,19 @@
+{
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.visible": false,
+  "window.menuBarVisibility": "toggle",
+  "terminal.integrated.rendererType": "dom",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": false,
+  "breadcrumbs.enabled": false,
+  
+}
+
