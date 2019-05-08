@@ -260,6 +260,8 @@ prompt_dir() {
     prompt_segment blue black '\w'
 }
 
+
+
 # Status:
 # - was there an error
 # - am I root
