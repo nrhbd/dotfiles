@@ -1,97 +1,88 @@
 {
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "editor.fontFamily": "Dank Mono",
-  "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.visible": false,
-  "terminal.integrated.rendererType": "dom",
-  "window.zoomLevel": 3,
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "all",
-  "editor.renderControlCharacters": false,
-  "breadcrumbs.enabled": true,
-  "explorer.openEditors.visible": 0,
-  "workbench.colorCustomizations": {
-    "[Grueling Hare Dark]": {
-      "statusBar.background": "#545c61"
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorSmoothCaretAnimation": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.fontFamily": "Dank Mono", 
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "workbench.activityBar.visible": true,
+    "terminal.integrated.rendererType": "dom",
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": true,
+    "explorer.openEditors.visible": 0,
+    "editor.tabSize": 2,
+
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[Grueling Hare Light]": {
-      "statusBar.background": "#545c61"
-    }
-  },
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          //following will be in italic (=FlottFlott)
-          "comment",
-          "entity.name.type.class", //class names
-          "keyword", //import, export, return…
-          "constant", //String, Number, Boolean…, this, super
-          "storage.modifier", //static keyword
-          "storage.type.class.js" //class keyword,
-          //   "variable"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      },
-      {
-        "scope": [
-          //following will be excluded from italics (VSCode has some defaults for italics)
-          "invalid",
-          "keyword.operator",
-          "constant.numeric.css",
-          "keyword.other.unit.px.css",
-          "constant.numeric.decimal.js",
-          "constant.numeric.json"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "cSpell.enabledLanguageIds": [
-    "asciidoc",
-    "c",
-    "cpp",
-    "csharp",
-    "css",
-    "git-commit",
-    "go",
-    "handlebars",
-    "haskell",
-    "html",
-    "jade",
-    "java",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "latex",
-    "less",
-    "markdown",
-    "php",
-    "plaintext",
-    "pug",
-    "python",
-    "restructuredtext",
-    "rust",
-    "scala",
-    "scss",
-    "text",
-    "todo",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-    "yml"
-  ],
-  "workbench.colorTheme": "Visual Studio Blue"
-}
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "cSpell.enabledLanguageIds": [
+      "asciidoc",
+      "c",
+      "cpp",
+      "csharp",
+      "css",
+      "git-commit",
+      "go",
+      "handlebars",
+      "haskell",
+      "html",
+      "jade",
+      "java",
+      "javascript",
+      "javascriptreact",
+      "json",
+      "jsonc",
+      "latex",
+      "less",
+      "markdown",
+      "php",
+      "plaintext",
+      "pug",
+      "python",
+      "restructuredtext",
+      "rust",
+      "scala",
+      "scss",
+      "text",
+      "todo",
+      "typescript",
+      "typescriptreact",
+      "yaml",
+      "yml"
+    ],
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontSize": 18,
+    "cSpell.userWords": [
+      "Cladogram",
+      "upsert"
+    ],
+    "eslint.alwaysShowStatus": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.colorTheme": "Prism",
+    
+  }
+  

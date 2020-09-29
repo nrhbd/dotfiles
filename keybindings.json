@@ -1,0 +1,25 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+cmd+b",
+    "command": "markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "key": "cmd+numpad0",
+    "command": "-workbench.action.zoomReset"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  }
+]
